@@ -32,3 +32,8 @@ jobs:
       run: ls lab8/src/
     - name: Generate JavaDoc
       run: javadoc -d lab8/javadoc -sourcepath lab8/src/  lab8/src/*.java -link http://docs.oracle.com/javase/7/docs/api/
+    - name: Publish pages
+      run: |
+        git add lab8/javadoc
+        git commit -m "Added pages"
+        git push origin gh-pages
