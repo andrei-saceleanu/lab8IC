@@ -27,6 +27,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: Package
-        path: ./lab8/build/dist/
+        path: ./lab8/dist/
     - name: Check hierarchy
-      run: ls
+      run: ls lab8/
