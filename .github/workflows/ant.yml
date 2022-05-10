@@ -30,3 +30,5 @@ jobs:
         path: ./lab8/dist/
     - name: Check hierarchy
       run: ls lab8/
+    - name: Generate JavaDoc
+      run: javadoc -d lab8/javadoc -sourcepath lab8/src/ -link http://docs.oracle.com/javase/7/docs/api/
