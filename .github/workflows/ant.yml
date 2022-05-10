@@ -31,4 +31,4 @@ jobs:
     - name: Check hierarchy
       run: ls lab8/
     - name: Generate JavaDoc
-      run: javadoc -d lab8/javadoc -sourcepath lab8/src/  **/*.java -link http://docs.oracle.com/javase/7/docs/api/
+      run: javadoc -d lab8/javadoc -sourcepath lab8/src/  -subpackages lab8 -link http://docs.oracle.com/javase/7/docs/api/
