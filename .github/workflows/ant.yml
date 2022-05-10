@@ -23,6 +23,7 @@ jobs:
         distribution: 'temurin'
     - name: Build with Ant
       run: ant -noinput -buildfile lab8/build.xml
+    - name: Upload artifact
     - uses: actions/upload-artifact@v3
       with:
         name: Package
