@@ -33,7 +33,7 @@ jobs:
     - name: Generate JavaDoc
       run: javadoc -d lab8/javadoc -sourcepath lab8/src/  lab8/src/*.java -link http://docs.oracle.com/javase/7/docs/api/
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.LAB8IC }}
-        publish_dir: lab8/javadoc
+      run: |
+        git add --all javadoc/
+        git commit -m "Published JavaDoc to pages"
+        git push origin gh-pages
