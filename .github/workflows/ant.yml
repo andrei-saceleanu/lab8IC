@@ -32,8 +32,13 @@ jobs:
       run: ls lab8/src/
     - name: Generate JavaDoc
       run: javadoc -d lab8/javadoc -sourcepath lab8/src/  lab8/src/*.java -link http://docs.oracle.com/javase/7/docs/api/
+    - name: Upload artifact of javadoc
+      uses: actions/upload-artifact@v3
+      with:
+        name: Javadocs
+        path: ./lab8/javadoc
     - name: Download artifact
       uses: actions/download-artifact@v3
       with:
-        name: Package
-        path: ./lab8/dist/
+        name: Javadocs
+        path: ./lab8/javadoc
